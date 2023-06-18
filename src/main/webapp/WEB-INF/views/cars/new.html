@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new car</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/cars}" th:object="${car}">
+    <label for="brand">Enter Brand</label>
+    <input type="text" th:field="*{brand}" id="brand">
+    <label for="brand">Enter model</label>
+    <input type="text" th:field="*{model}" id="model">
+    <label for="brand">Enter price</label>
+    <input type="number" th:field="*{price}" id="price">
+    <label for="brand">Enter year</label>
+    <input type="number" th:field="*{year}" id="year">
+    <br/>
+    <input type="submit" value="create">
+</form>
+
+</body>
+</html>

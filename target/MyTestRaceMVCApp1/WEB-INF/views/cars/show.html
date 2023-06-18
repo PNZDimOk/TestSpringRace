@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Car</title>
+</head>
+<body>
+<p th:text="${car.getId()}">value</p>
+<p th:text="${car.getBrand()}">value</p>
+<p th:text="${car.getModel()}">value</p>
+<p th:text="${car.getPrice()}">value</p>
+<p th:text="${car.getYear()}">value</p>
+<a th:href="@{/cars/{id}/edit(id=${car.getId()})}">Edit</a>
+<form th:method="DELETE" th:action="@{/cars/{id}(id=${car.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+</body>
+</html>
